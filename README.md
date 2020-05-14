@@ -44,7 +44,7 @@ CentOS8環境に、Zabbix5.0-server(rpm)とZabbix-agent(rpm)の機能を自動�
 [servers]
 testsv01 ansible_ssh_host=192.168.11.1 ansible_ssh_user=root
 [agents]
-testcl01 ansible_ssh_host=192.168.11.2 ansible_ssh_user=root
+testcl01 ansible_ssh_host=192.168.11.1 ansible_ssh_user=root
 [all:vars]
 timezone="Asia/Tokyo"
 zabbix_server_ip="192.168.11.1"
