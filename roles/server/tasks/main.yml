@@ -64,7 +64,7 @@
   shell: zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql zabbix -u root
   when: count_users.rc != 0
 
-- name: modify file /etc/php-fpm.d/zabbix.conf  centos8-only
+- name: modify file /etc/php-fpm.d/zabbix.conf
   lineinfile:
     dest='/etc/php-fpm.d/zabbix.conf'
     state=present
@@ -73,18 +73,6 @@
     line='php_value[date.timezone] = Asia/Tokyo' 
   notify:
     - restart php-fpm
-  when: ansible_distribution_major_version == '8'
-
-- name: modify httpd config centos7-only
-  lineinfile:
-    dest='/etc/httpd/conf.d/zabbix.conf'
-    state=present
-    backrefs=no
-    regexp='php_value date.timezone'
-    line='        php_value date.timezone Asia/Tokyo' 
-  notify:
-    - restart httpd
-  when: ansible_distribution_major_version == '7'
 
 - name: enabled and start httpd
   service:
