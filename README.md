@@ -4,11 +4,11 @@
 ## 概要
 
 Ansible用playbookです
-CentOS8環境に、Zabbix5.0-server(rpm)とZabbix-agent(rpm)の機能を自動設定する
+CentOS8-stream or CentOS8 CloneOS環境に、Zabbix6.0LTS-server(rpm)とZabbix-agent(rpm)の機能を自動設定する
 
 ## 対象となる環境
 
-* CentOS8
+* CentOS8 or RockyLinux8 or AlmaLinux8
 * インターネットにつながり、ansibleサーバからrootユーザで直接ssh(ssh公開鍵認証でログイン)できること
 * 最小構成でインストールしたCentOS8で稼働確認実施
 
@@ -28,7 +28,7 @@ CentOS8環境に、Zabbix5.0-server(rpm)とZabbix-agent(rpm)の機能を自動�
 	
   
 * zabbix-agent
-	+ zabbix-agent5.0
+	+ zabbix-agent6.0
   + zabbix-agentの設定(Server,ServerActive,HostnameItem)
 
 # 指定可能なインストール先/設定内容
