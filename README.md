@@ -1,4 +1,4 @@
-| :warning: まだforkしたばかりでなにもいじっていません。リリースできるようになったらこのワーニングを消します。 |
+| :warning: まだforkしたばかりでなにもいじっていません。リリースできるようになったらこのワーニングを消します。 Not yet released in the works. I will delete the warning sentence when I can release it |
 | --- |
 
 ## 概要
